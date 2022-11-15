@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        dockerfile {
-            filename: 'Dockerfile.prod'
-        }
-    }
+    agent { dockerfile true }
     stages {
         stage('Deploy') {
             steps {
