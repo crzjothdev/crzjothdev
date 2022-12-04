@@ -1,32 +1,44 @@
 import React from 'react'
+import Image from 'next/image'
 import MuiAppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import Container from '@mui/material/Container'
-import makeStyles from '@mui/styles/makeStyles'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Drawer from '@mui/material/Drawer'
 import MenuList from '@mui/material/MenuList'
 import MenuItem from '@mui/material/MenuItem'
+import Avatar from '@mui/material/Avatar'
+import Divider from '@mui/material/Divider'
+import { styled } from '@mui/material/styles'
 
-const useStyles = makeStyles((theme) => ({
-    root: {
+const StyledMuiAppBar = styled(MuiAppBar)(({ theme }) => ({
+    backgroundColor: 'rgba(255, 255, 255, 0.8)'
+}))
 
-    },
-    appBar: {
-        backgroundColor: 'rgba(255,255,255,0.9)'
-    },
-    list: {
-        minWidth: theme.spacing(30)
+const StyledToolBar = styled(Toolbar)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        minHeight: '80px'
     }
 }))
 
-export default function AppBar(props) {
-    const { pages, ...other } = props
+const StyledDrawer = styled(Drawer)(({ theme }) => ({
+    '& .MuiDrawer-paper': {
+        backgroundColor: '#05262b',
+        color: theme.palette.grey[50],
+    }
+}))
 
-    const classes = useStyles()
+const DrawerHeader = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    ...theme.mixins.toolbar,
+    justifyContent: 'center',
+}))
+
+export default function AppBar(props) {
+    const { pages, onNavigateClick, ...other } = props
 
     const [open, setOpen] = React.useState(false)
 
@@ -40,45 +52,104 @@ export default function AppBar(props) {
 
     return (
         <>
-            <MuiAppBar position="fixed" className={classes.appBar}>
-                <Toolbar>
+            <StyledMuiAppBar position="static">
+                <StyledToolBar>
                     <Box sx={{
                         display: { xs: 'flex', md: 'none' },
-                        justifyContent: 'center'
+                        justifyContent: 'space-between',
+                        width: '100%',
                     }}>
                         <IconButton
                             onClick={handleToggle}
+                            color="primary"
                         >
                             <MenuIcon />
                         </IconButton>
+                        <Button
+                            href="/documents/resume.pdf"
+                            variant="outlined"
+                            component="a"
+                            target="_blank"
+                        >
+                            Resume
+                        </Button>
                     </Box>
                     <Box sx={{
                         flexGrow: 1,
                         display: { xs: 'none', md: 'flex' },
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        position: 'relative'
                     }}>
-                        {pages.map((page, index) => (
-                            <Button
-                                key={index}
-                            >
-                                {page}
-                            </Button>
-                        ))}
+                        <Box
+                            sx={(theme) => {
+                            return ({
+                                position: 'absolute',
+                                left: theme.spacing(1),
+                                top: '50%',
+                                transform: 'translateY(-50%)'
+                            })
+                        }}>
+                            <Avatar
+                                src="/images/logo.webp"
+                                size="large"
+                                variant="square"
+                            />
+                        </Box>
+                        <Box>
+                            {pages.map((page, index) => (
+                                <Button
+                                    key={index}
+                                    onClick={() => onNavigateClick(page)}
+                                >
+                                    {page.label}
+                                </Button>
+                            ))}
+                        </Box>
+                        <Button
+                            variant="outlined"
+                            component="a"
+                            target="_blank"
+                            href="/documents/resume.pdf"
+                            sx={(theme) => {
+                                console.log(theme)
+                                return ({
+                                    position: 'absolute',
+                                    right: theme.spacing(1),
+                                    top: '50%',
+                                    transform: 'translateY(-50%)'
+                                })
+                            }}
+                        >
+                            Resume
+                        </Button>
                     </Box>
-                </Toolbar>
-            </MuiAppBar>
-            <Drawer
+                </StyledToolBar>
+            </StyledMuiAppBar>
+            <StyledDrawer
                 open={open}
                 onClose={handleClose}
             >
-                <MenuList
-                    className={classes.list}
-                >
+                <DrawerHeader>
+                    <Image
+                        src="/images/logo.webp"
+                        width={50}
+                        height={50}
+                    />
+                </DrawerHeader>
+                <Divider sx={{ borderColor: '#4f4f4f' }} />
+                <MenuList sx={(theme) => ({
+                    minWidth: theme.spacing(25)
+                })}>
                     {pages.map((page, index) => (
-                        <MenuItem key={index}>{page}</MenuItem>
+                        <MenuItem 
+                            key={index}
+                            onClick={() => onNavigateClick(page)}
+                        >
+                            {page.label}
+                        </MenuItem>
                     ))}
                 </MenuList>
-            </Drawer>
+            </StyledDrawer>
         </>
     )
 }
