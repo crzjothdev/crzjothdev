@@ -132,6 +132,7 @@ export default function AppBar(props) {
                 <DrawerHeader>
                     <Image
                         src="/images/logo.webp"
+                        alt="angelos-logo"
                         width={50}
                         height={50}
                     />

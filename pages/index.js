@@ -37,6 +37,11 @@ export default function App() {
       <Head>
         <title>Angelo Cruz - Software Developer</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+        <meta
+          name="description"
+          content="Angelo Cruz profesional web page with information about 
+          skills, projects and availability to get new jobs"
+        />
       </Head>
       <AppBar pages={pages} onNavigateClick={handleNavigate} />
       <main>

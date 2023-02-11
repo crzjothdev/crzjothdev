@@ -13,7 +13,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: `url('/back.png')`,
+    backgroundImage: `url('/back.webp')`,
     backgroundSize: 'cover',
     flexDirection: 'column'
 }))

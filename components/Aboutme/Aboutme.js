@@ -24,8 +24,8 @@ const StyledBox = styled(Box)(({ theme }) => ({
 }))
 
 const StyledImage = styled(Image)(({ theme }) => ({
-    borderRadius: theme.spacing(4),
-    marginBottom: theme.spacing(4),
+    borderRadius: theme.spacing(3),
+    marginBottom: theme.spacing(3),
     [theme.breakpoints.up('md')]: {
         borderRadius: theme.spacing(5),
         marginBottom: 0,
