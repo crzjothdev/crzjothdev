@@ -16,20 +16,20 @@ export default function SocialNetwork() {
                 component="a"
                 href="https://github.com/crzjothdev"
             >
-                <GitHubIcon />
+                <GitHubIcon alt="GitHub" />
             </IconButton>
             <IconButton
                 component="a"
                 color="primary"
                 href="https://linkedin.com/in/angelo-cruz-4b998a139"
             >
-                <LinkedInIcon />
+                <LinkedInIcon alt="LinkedIn" />
             </IconButton>
             <IconButton
                 component="a"
                 href="https://twitter.com/AngeloC56997529"
             >
-                <TwitterIcon />
+                <TwitterIcon alt="Twitter" />
             </IconButton>
         </Box>
     )

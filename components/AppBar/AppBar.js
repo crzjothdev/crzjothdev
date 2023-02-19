@@ -62,6 +62,7 @@ export default function AppBar(props) {
                         <IconButton
                             onClick={handleToggle}
                             color="primary"
+                            aria-label="menu"
                         >
                             <MenuIcon />
                         </IconButton>
@@ -91,6 +92,7 @@ export default function AppBar(props) {
                         }}>
                             <Avatar
                                 src="/images/logo.webp"
+                                alt="angelos-logo"
                                 size="large"
                                 variant="square"
                             />

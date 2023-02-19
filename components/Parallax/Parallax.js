@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 import GithubIcon from '@mui/icons-material/GitHub'
@@ -6,6 +7,11 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
 
+const StyledImage = styled(Image)(({ theme }) => ({
+    zIndex: -1,
+    objectFit: 'cover'
+}))
+
 const StyledBox = styled(Box)(({ theme }) => ({
     minHeight: '100vh',
     width: '100%',
@@ -13,8 +19,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: `url('/back.webp')`,
-    backgroundSize: 'cover',
+    position: 'relative',
     flexDirection: 'column'
 }))
 
@@ -31,10 +36,10 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 export default function Parallax() {
     return (
         <StyledBox>
-            <Typography variant="h2" color="white">
+            <Typography component="h1" variant="h2" color="white">
                 Angelo Cruz
             </Typography>
-            <Typography variant="h4" color="white">
+            <Typography component="h2" variant="h4" color="white">
                 Software Developer
             </Typography>
             <Box sx={(theme) => ({
@@ -66,6 +71,11 @@ export default function Parallax() {
                     <TwitterIcon />
                 </StyledIconButton>
             </Box>
+            <StyledImage
+                src="/back.webp"
+                alt="back"
+                fill={true}
+            />
         </StyledBox>
     )
 }
