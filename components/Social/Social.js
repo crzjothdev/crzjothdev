@@ -15,6 +15,7 @@ export default function SocialNetwork() {
             <IconButton
                 component="a"
                 href="https://github.com/crzjothdev"
+                aria-label="GitHub"
             >
                 <GitHubIcon alt="GitHub" />
             </IconButton>
@@ -22,12 +23,14 @@ export default function SocialNetwork() {
                 component="a"
                 color="primary"
                 href="https://linkedin.com/in/angelo-cruz-4b998a139"
+                aria-label="LinkedIn"
             >
                 <LinkedInIcon alt="LinkedIn" />
             </IconButton>
             <IconButton
                 component="a"
                 href="https://twitter.com/AngeloC56997529"
+                aria-label="Twitter"
             >
                 <TwitterIcon alt="Twitter" />
             </IconButton>

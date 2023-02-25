@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { styled } from '@mui/material/styles'
 
 const List = (props) => {
     const { children, ...other } = props
@@ -28,6 +27,7 @@ export default function Experience() {
         <Box id="experience">
             <Typography
                 variant="h4"
+                component="h4"
                 mb={4}
             >
                 Experience
@@ -43,7 +43,7 @@ export default function Experience() {
             })}>
                 <Box pb={3}>
                     <Box mb={1}>
-                        <Typography variant="h6">
+                        <Typography variant="h6" component="h5">
                             <span>External Consultant at </span>
                             <Link 
                                 href="https://jetstereo.com" 
@@ -71,7 +71,7 @@ export default function Experience() {
                 </Box>
                 <Box pb={3}>
                     <Box mb={1}>
-                        <Typography variant="h6">
+                        <Typography variant="h6" component="h5">
                             Software Develper at <strong>JETSTEREO S.A.</strong>
                         </Typography>
                         <Typography variant="subtitle2">
@@ -98,7 +98,7 @@ export default function Experience() {
                 </Box>
                 <Box pb={2}>
                     <Box mb={1}>
-                        <Typography variant="h6">
+                        <Typography variant="h6" component="h5">
                             <span>Software Develper at </span>
                             <Link 
                                 href="https://banhcafe.hn" 

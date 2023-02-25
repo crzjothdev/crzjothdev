@@ -55,25 +55,29 @@ export default function Parallax() {
                 <StyledIconButton
                     component="a"
                     href="https://github.com/crzjothdev"
+                    aria-label="GitHub"
                 >
-                    <GithubIcon />
+                    <GithubIcon alt="GitHub" />
                 </StyledIconButton>
                 <StyledIconButton
                     component="a"
                     href="https://linkedin.com/in/angelo-cruz-4b998a139"
+                    aria-label="LinkedIn"
                 >
-                    <LinkedInIcon />
+                    <LinkedInIcon alt="LinkedIn" />
                 </StyledIconButton>
                 <StyledIconButton
                     component="a"
                     href="https://twitter.com/AngeloC56997529"
+                    aria-label="Twitter"
                 >
-                    <TwitterIcon />
+                    <TwitterIcon alt="Twitter" />
                 </StyledIconButton>
             </Box>
             <StyledImage
                 src="/back.webp"
                 alt="back"
+                sizes="100vw"
                 fill={true}
             />
         </StyledBox>
