@@ -140,11 +140,14 @@ export default function AppBar(props) {
                     />
                 </DrawerHeader>
                 <Divider sx={{ borderColor: '#4f4f4f' }} />
-                <MenuList sx={(theme) => ({
-                    minWidth: theme.spacing(25)
-                })}>
+                <MenuList
+                    onClick={handleClose}
+                    sx={(theme) => ({
+                        minWidth: theme.spacing(25)
+                    })}
+                >
                     {pages.map((page, index) => (
-                        <MenuItem 
+                        <MenuItem
                             key={index}
                             onClick={() => onNavigateClick(page)}
                         >

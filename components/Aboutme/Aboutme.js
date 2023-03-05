@@ -40,6 +40,7 @@ export default function Aboutme() {
         <Box id="about-me">
             <Typography 
                 variant="h4"
+                component="h4"
                 mb={4}
             >
                 About Me
