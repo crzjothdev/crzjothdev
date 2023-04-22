@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from '@mui/material/Link'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
@@ -40,7 +41,7 @@ export default function Aboutme() {
         <Box id="about-me">
             <Typography 
                 variant="h4"
-                component="h4"
+                component="h3"
                 mb={4}
             >
                 About Me
@@ -69,10 +70,16 @@ export default function Aboutme() {
                             display: 'grid',
                             gridTemplateColumns: 'repeat(2, 1fr)',
                             listStyleImage: 'url("/icons/chevron.svg")',
-                            '& li::marker': {
+                            '& li:not(:last-child)::marker': {
                                 fontSize: '40px',
                                 verticalAlign: 'middle',
                                 lineHeight: '20px'
+                            },
+                            '& li:last-child::marker': {
+                                content: '" "',
+                            },
+                            '& li:last-child': {
+                                marginTop: 1
                             }
                         }}
                     >
@@ -82,6 +89,11 @@ export default function Aboutme() {
                         <li>Java</li>
                         <li>C++</li>
                         <li>Phyton</li>
+                        <li>
+                            <Link target="_blank" href="/documents/resume.pdf">
+                                Read more on the resume
+                            </Link>
+                        </li>
                     </Box>
                 </Box>
                 <Box sx={{

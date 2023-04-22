@@ -5,7 +5,7 @@ export default function Disclaimers(props) {
 
     return (
         <Box>
-            <Typography variant="h6">
+            <Typography variant="h5">
                 Angelo Cruz
             </Typography>
             {/* <Typography variant="subtitle1">

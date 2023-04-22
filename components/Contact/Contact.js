@@ -7,7 +7,7 @@ export default function Contact() {
         <Box id="contact">
             <Typography 
                 variant="h4"
-                component="h4"
+                component="h3"
                 mb={4}
             >
                 Get In Touch
@@ -26,7 +26,7 @@ export default function Contact() {
                 <Box sx={{
                     textAlign: 'center',
                 }}>
-                    <Typography variant="h6" component="h5" mb={2}>
+                    <Typography variant="h6" component="h4" mb={2}>
                         I am actully available to join a great company
                         that would like to achieve great accomplishments
                     </Typography>

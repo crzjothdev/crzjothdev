@@ -27,7 +27,7 @@ export default function Experience() {
         <Box id="experience">
             <Typography
                 variant="h4"
-                component="h4"
+                component="h3"
                 mb={4}
             >
                 Experience
@@ -43,7 +43,7 @@ export default function Experience() {
             })}>
                 <Box pb={3}>
                     <Box mb={1}>
-                        <Typography variant="h6" component="h5">
+                        <Typography variant="h6" component="h4">
                             <span>External Consultant at </span>
                             <Link 
                                 href="https://jetstereo.com" 
@@ -71,7 +71,7 @@ export default function Experience() {
                 </Box>
                 <Box pb={3}>
                     <Box mb={1}>
-                        <Typography variant="h6" component="h5">
+                        <Typography variant="h6" component="h4">
                             Software Develper at <strong>JETSTEREO S.A.</strong>
                         </Typography>
                         <Typography variant="subtitle2">
@@ -98,7 +98,7 @@ export default function Experience() {
                 </Box>
                 <Box pb={2}>
                     <Box mb={1}>
-                        <Typography variant="h6" component="h5">
+                        <Typography variant="h6" component="h4">
                             <span>Software Develper at </span>
                             <Link 
                                 href="https://banhcafe.hn" 
