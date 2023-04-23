@@ -52,7 +52,7 @@ export default function Experience() {
                                 @JETSTEREO S.A.
                             </Link>
                         </Typography>
-                        <Typography variant="subtitle2">
+                        <Typography variant="subtitle2" component="h5">
                             Aug 2023
                         </Typography>
                     </Box>
@@ -74,11 +74,11 @@ export default function Experience() {
                         <Typography variant="h6" component="h4">
                             Software Develper at <strong>JETSTEREO S.A.</strong>
                         </Typography>
-                        <Typography variant="subtitle2">
+                        <Typography variant="subtitle2" component="h5">
                             Oct 2019 - Jan 2022
                         </Typography>
                     </Box>
-                    <Typography variant="p" xs={{ textAlign: 'justify' }}>
+                    <Typography variant="p" sx={{ textAlign: 'justify' }}>
                         I cooperate as to enhance customer focused services as a 
                         way to provide soft navigation, especially the checkout 
                         module of their web shopping platform. I also started to 
@@ -107,11 +107,11 @@ export default function Experience() {
                                 @BANHCAFE
                             </Link>
                         </Typography>
-                        <Typography variant="subtitle2">
+                        <Typography variant="subtitle2" component="h5">
                             Sep 2022 - Nov 2022
                         </Typography>
                     </Box>
-                    <Typography variant="p" xs={{ textAlign: 'justify' }}>
+                    <Typography variant="p" sx={{ textAlign: 'justify' }}>
                         Responsable to build better system interfaces to communicate securely 
                         and faster systems both home hosted and externally privided. I built 
                         an important tool for the bank, It was popular to carry a physical 

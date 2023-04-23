@@ -90,7 +90,17 @@ export default function Aboutme() {
                         <li>C++</li>
                         <li>Phyton</li>
                         <li>
-                            <Link target="_blank" href="/documents/resume.pdf">
+                            <Link 
+                                target="_blank" 
+                                href="/documents/resume.pdf"
+                                sx={{
+                                    color: '#333',
+                                    textDecorationColor: '#333',
+                                    '&:hover': {
+                                        color: 'primary.main'
+                                    }
+                                }}
+                            >
                                 Read more on the resume
                             </Link>
                         </li>
