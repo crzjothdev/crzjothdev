@@ -78,6 +78,7 @@ export default function Parallax() {
                 src="/back.webp"
                 alt="back"
                 sizes="100vw"
+                priority={true}
                 fill={true}
             />
         </StyledBox>
