@@ -71,9 +71,9 @@ export default function App() {
             <Section>
               <Customers />
             </Section> */}
-            {/* <Section>
+            <Section>
               <Projects />
-            </Section> */}
+            </Section>
             {/* <Section
             >
               <Testimonials />
