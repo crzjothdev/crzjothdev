@@ -12,12 +12,16 @@ export default function ProjectCard(props) {
 
     return (
         <Card elevation={3}>
-            <CardActionArea href={gitHubUrl}>
+            <CardActionArea href={gitHubUrl} aria-label="GitHub Repository">
                 <Box sx={{
                     position: 'relative',
                     aspectRatio: '1/1'
                 }}>
-                    <Image src={thumbnail} fill={true} />
+                    <Image
+                        src={thumbnail}
+                        fill={true}
+                        alt="Alpha Wolf"
+                    />
                     <Box sx={(theme) => ({
                         padding: theme.spacing(0.5, 0.5, 0.5, 0.7),
                         backgroundColor: '#fff',
