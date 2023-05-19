@@ -19,14 +19,17 @@ const pages = [
   { label: 'Experience', target: 'experience' },
   // { label: 'SquiledTools', target: '#tools' },
   // { label: 'Customers', target: '#customers' },
-  // { label: 'Projects', target: '#projects' },
+  { label: 'Projects', target: 'projects' },
   // { label: 'Testimonials', target: 'testimonials' },
   { label: 'Contact', target: 'contact' }
 ]
 
 export default function App() {
+  const delay =  ms => new Promise(resolve => setTimeout(resolve, ms))
 
-  const handleNavigate = (page) => {
+  const handleNavigate = async (page) => {
+    await delay(10)
+
     document.getElementById(page.target).scrollIntoView({
       behavior: 'smooth'
     })

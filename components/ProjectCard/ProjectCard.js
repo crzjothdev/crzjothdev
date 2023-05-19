@@ -52,5 +52,5 @@ ProjectCard.propTypes = {
     thumbnail: PropTypes.string.isRequired,
     gitHubUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    subTitle: PropTypes.string.isRequired
+    subtitle: PropTypes.string.isRequired
 }

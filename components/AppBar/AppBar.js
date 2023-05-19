@@ -112,14 +112,11 @@ export default function AppBar(props) {
                             component="a"
                             target="_blank"
                             href="/documents/resume.pdf"
-                            sx={(theme) => {
-                                console.log(theme)
-                                return ({
-                                    position: 'absolute',
-                                    right: theme.spacing(1),
-                                    top: '50%',
-                                    transform: 'translateY(-50%)'
-                                })
+                            sx={{
+                                position: 'absolute',
+                                right: (theme) => theme.spacing(1),
+                                top: '50%',
+                                transform: 'translateY(-50%)'
                             }}
                         >
                             Resume
