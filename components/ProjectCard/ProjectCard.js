@@ -12,7 +12,7 @@ export default function ProjectCard(props) {
 
     return (
         <Card elevation={3}>
-            <CardActionArea href={gitHubUrl} aria-label="GitHub Repository">
+            <CardActionArea target="_blank" href={gitHubUrl} aria-label="GitHub Repository">
                 <Box sx={{
                     position: 'relative',
                     aspectRatio: '1/1'

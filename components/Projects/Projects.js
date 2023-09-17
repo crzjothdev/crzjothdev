@@ -40,7 +40,15 @@ export default function Projects() {
                             title="Professional Profile"
                             subtitle="Built with NextJS 13"
                             thumbnail="/images/logo.webp"
-                            gitHubUrl="https://github.com/crzjothdev"
+                            gitHubUrl="https://github.com/crzjothdev/crzjothdev"
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3}>
+                        <ProjectCard
+                            title="Wedding Template"
+                            subtitle="Built with NextJS 13"
+                            thumbnail="/images/wedding-logo.webp"
+                            gitHubUrl="https://github.com/crzjothdev/wedding"
                         />
                     </Grid>
                 </Grid>
