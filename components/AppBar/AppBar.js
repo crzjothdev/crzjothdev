@@ -111,7 +111,7 @@ export default function AppBar(props) {
                             variant="outlined"
                             component="a"
                             target="_blank"
-                            href="/documents/resume.pdf"
+                            href="/documents/cv-angelo-cruz.pdf"
                             sx={{
                                 position: 'absolute',
                                 right: (theme) => theme.spacing(1),
