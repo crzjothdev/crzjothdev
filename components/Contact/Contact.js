@@ -32,7 +32,7 @@ export default function Contact() {
                     </Typography>
                     <Button
                         component="a"
-                        href="mailto: jothang31@gmail.com"
+                        href="mailto: angelo.cruz@crzjothdev.com"
                         color="primary"
                         variant="contained"
                         disableElevation
