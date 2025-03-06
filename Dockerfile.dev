@@ -1,0 +1,13 @@
+# use Node.js 23 as a base image
+FROM node:23-alpine
+# set the working directory
+WORKDIR /app
+# install dependencies only when package.json changes
+COPY package*.json ./
+RUN npm install --force
+# copy the rest of the project files
+COPY . .
+# expose port 3000 for Next.js
+EXPOSE 3000
+# start Next.js in developent mode
+CMD ["npm", "run", "dev"]

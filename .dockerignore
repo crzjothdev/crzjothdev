@@ -1,0 +1,7 @@
+node_modules
+.next
+out
+Dockerfile
+Dockerfile.dev
+Dockerfile.prod
+.dockerignore
