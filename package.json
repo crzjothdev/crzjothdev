@@ -4,17 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NODE_ENV=production next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^6.1.0",
-    "@mui/material": "^6.1.0",
     "@tailwindcss/postcss": "^4.0.12",
     "next": "^15.2.0",
     "postcss": "^8.5.3",

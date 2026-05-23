@@ -1,16 +1,26 @@
-html,
-body {
-  padding: 0;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-teal: #20909a;
+  --color-footer-dark: #05262b;
+}
+
+.chevron-list {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.chevron-list li::marker {
+  font-size: 40px;
+  vertical-align: middle;
+  line-height: 20px;
 }
 
-* {
-  box-sizing: border-box;
+.chevron-list li:last-child::marker {
+  content: " ";
+}
+
+.chevron-list li:last-child {
+  margin-top: 8px;
 }
