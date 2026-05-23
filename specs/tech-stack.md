@@ -1,6 +1,6 @@
 # Tech Stack
 
-Reverse-engineered from the project as of May 2026. Branch `upgrade` is an active migration toward App Router + TypeScript + Tailwind CSS (replacing MUI).
+Current state as of May 2026. Phase 1 migration to App Router + TypeScript + Tailwind CSS is complete.
 
 ---
 
@@ -8,11 +8,10 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 
 | Item | Detail |
 |---|---|
-| **Next.js** | v13 (Pages Router — currently active) |
-| **App Router** | In progress on `upgrade` branch |
-| **React** | v18.2 |
+| **Next.js** | v15 — App Router |
+| **React** | v18.3 |
 | **Output mode** | `standalone` (configured in `next.config.js`) |
-| **Node.js** | v16 (Dockerfile base image: `node:16-alpine`) |
+| **Node.js** | v23 (dev container base image: `node:23-alpine`) |
 
 ---
 
@@ -20,8 +19,8 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 
 | Item | Detail |
 |---|---|
-| **JavaScript** | Current primary language (`.js` files throughout) |
-| **TypeScript** | Being introduced on `upgrade` branch (`.tsx` files appearing in `app/` and `components/`) |
+| **TypeScript** | Primary language — all components `.tsx`, config `.ts` |
+| **JavaScript** | Removed — no `.js` files remain in `components/` or `app/` |
 
 ---
 
@@ -29,12 +28,12 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 
 | Item | Detail |
 |---|---|
-| **Tailwind CSS** | Utility-first CSS framework — target styling system (replacing MUI) |
-| **Material UI (MUI)** | v5 — current styling system, being removed during `upgrade` migration |
-| **Emotion** | CSS-in-JS engine used by MUI — being removed alongside MUI |
-| **clsx** | Utility for conditional class composition — kept, pairs well with Tailwind |
-| **Dark mode** | To be implemented via Tailwind's `dark:` variant strategy (class-based toggle) |
-| **Typography** | Font choice to be defined during design refresh phase |
+| **Tailwind CSS** | v4 — utility-first CSS, active styling system |
+| **PostCSS** | via `@tailwindcss/postcss` plugin (`postcss.config.mjs`) |
+| **Custom tokens** | `--color-brand-teal: #20909a`, `--color-footer-dark: #05262b` defined in `styles/globals.css` via `@theme {}` |
+| **Dark mode** | Configured via `@custom-variant dark` (class strategy) — toggle wired up in Phase 3 |
+| **clsx** | Utility for conditional class composition |
+| **Typography** | System sans-serif stack for Phase 1; font choice finalised in Phase 3 |
 
 ---
 
@@ -42,7 +41,7 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 
 | Item | Detail |
 |---|---|
-| **react-scroll** | Smooth-scroll to in-page sections |
+| **react-scroll** | Smooth-scroll to in-page sections by DOM element ID |
 | **Responsive layout** | Tailwind breakpoints (`md:`, `lg:`); content constrained to 70% (md) / 60% (lg) on wide screens |
 
 ---
@@ -51,7 +50,7 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 
 | Item | Detail |
 |---|---|
-| **Google Tag Manager** | Integrated via `react-gtm-module` |
+| **Google Tag Manager** | Integrated via `react-gtm-module`; initialised in `app/gtm-provider.tsx` (`'use client'`) |
 
 ---
 
@@ -65,11 +64,27 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 | Experience | Active |
 | Projects | Active |
 | Contact | Active |
-| Skilled Tools | Implemented, commented out |
-| Customers | Implemented, commented out |
-| Testimonials | Implemented, commented out |
-| Social links | Component exists (`components/Social/`) |
-| Disclaimers | Component exists (`components/Disclaimers/`) |
+| Skilled Tools | Migrated, commented out in page |
+| Customers | Migrated, commented out in page |
+| Testimonials | Migrated, commented out in page |
+| Social links | Active (in Footer and Parallax) |
+| Disclaimers | Active (in Footer) |
+
+---
+
+## Development Environment
+
+The project runs entirely inside a Docker container. **All development commands must be run via `docker exec`, not on the host.**
+
+| Item | Detail |
+|---|---|
+| **Dev container name** | `alphawolf` (defined in `compose.yaml`) |
+| **Dev Dockerfile** | `Dockerfile.dev` — base image `node:23-alpine`, runs `npm run dev` |
+| **Compose file** | `compose.yaml` |
+| **Volume mount** | `./:/app` — host project directory is live-synced into the container |
+| **node_modules** | Anonymous volume at `/app/node_modules` — isolated from host; changes to `package.json` require running `npm install` inside the container |
+| **Port** | `3000:3000` — app accessible at `http://localhost:3000` |
+| **Run a command** | `docker exec alphawolf <command>` — e.g. `docker exec alphawolf npm run build` |
 
 ---
 
@@ -77,10 +92,11 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 
 | Item | Detail |
 |---|---|
-| **Docker** | Multi-stage build (`Dockerfile`, `Dockerfile.prod`) using `node:16-alpine` |
-| **Docker Compose** | `docker-compose.yaml` for local/prod orchestration; container named `alpha-wolf` |
-| **Jenkins** | `Jenkinsfile` defines a declarative pipeline with a Deploy stage (early stage) |
-| **CI/CD** | Jenkins builds from Dockerfile; deployment pipeline is in early development |
+| **Docker (dev)** | `Dockerfile.dev` — `node:23-alpine`, mounts source, runs `next dev` |
+| **Docker (prod)** | `Dockerfile.prod` — multi-stage build, `standalone` output, production-ready image |
+| **Docker Compose** | `compose.yaml` for local dev |
+| **Jenkins** | `Jenkinsfile` defines a declarative pipeline — Deploy stage in early development |
+| **CI/CD** | Jenkins builds from Dockerfile; full pipeline wired up in Phase 6 |
 
 ---
 
@@ -88,8 +104,10 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 
 | Item | Detail |
 |---|---|
-| **Jest** | Installed as of commit `82ea917` |
-| **Test files** | `AppBar.test.tsx` exists on `upgrade` branch (early) |
+| **Jest** | v29 with `jest-environment-jsdom` |
+| **React Testing Library** | `@testing-library/react` v16 |
+| **TypeScript support** | `ts-jest` + `@types/jest` |
+| **Run tests** | `docker exec alphawolf npm test` |
 
 ---
 
@@ -97,8 +115,9 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 
 | Item | Detail |
 |---|---|
-| **ESLint** | v8.12 with `eslint-config-next` |
-| **Strict mode** | `reactStrictMode: true` in `next.config.js` |
+| **ESLint** | v8 with `eslint-config-next` |
+| **TypeScript strict mode** | `strict: true` in `tsconfig.json` |
+| **React strict mode** | `reactStrictMode: true` in `next.config.js` |
 
 ---
 
@@ -108,5 +127,5 @@ Reverse-engineered from the project as of May 2026. Branch `upgrade` is an activ
 |---|---|
 | **Images** | `.webp` format (profile, logo, projects, parallax background) |
 | **Icons** | SVG language icons (JS, React, PHP, Python, Java, C++, C#, Rust) |
-| **Documents** | Resume PDF available at `/documents/resume.pdf` |
+| **Documents** | Resume PDF at `/documents/resume.pdf` |
 | **Favicon** | `.ico` at `/images/favicon.ico` |

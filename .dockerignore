@@ -1,0 +1,8 @@
+node_modules
+.next
+.swc
+out
+Dockerfile
+Dockerfile.dev
+Dockerfile.prod
+.dockerignore
