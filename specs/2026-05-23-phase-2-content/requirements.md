@@ -68,7 +68,7 @@ Suggested bullet points:
 
 ### Existing entry — External Consultant at JETSTEREO S.A.
 
-The current date label is "Aug 2023" with no end date. Update to reflect the correct range. If the engagement was brief, use "Aug 2023 – Sep 2023" (adjust to the actual end date). The description and bullet points are acceptable — fix grammar as needed.
+The current date label is "Aug 2023" with no end date. **Leave it as "Aug 2023" — this is intentional.** The engagement was brief (~2 months of freelance work) and showing only the start month avoids drawing attention to the short duration while remaining accurate. Do not add an end date. The description and bullet points are acceptable — fix grammar as needed.
 
 ### Freelance period (Aug 2023 – Feb 2025)
 
