@@ -21,7 +21,7 @@ export default function Experience() {
           </div>
           <p className="text-justify">
             As the sole software engineer, I am responsible for designing and building the
-            company's complete digital presence and internal tooling from the ground up. This
+            company&apos;s complete digital presence and internal tooling from the ground up. This
             includes the public website, an automated quotation system that replaced a manual
             paper-based process, project administration workflows via Jira, and an ERP platform
             currently in active development to centralise operations across the business.
@@ -81,7 +81,7 @@ export default function Experience() {
           </div>
           <p className="text-justify">
             Contributed to enhancing customer-focused services by improving navigation across the
-            checkout module of the company's web shopping platform. Applied DevOps principles to
+            checkout module of the company&apos;s web shopping platform. Applied DevOps principles to
             automate the deployment process and, when a full rebuild of the online store was
             required, proposed and led the adoption of modern tools to improve performance.
           </p>

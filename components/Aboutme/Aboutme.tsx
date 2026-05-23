@@ -7,13 +7,13 @@ export default function Aboutme() {
       <div className="p-8 rounded-3xl border border-brand-teal flex flex-col md:p-12 md:rounded-[40px] md:flex-row gap-6">
         <div className="flex-1 text-justify md:order-1">
           <p className="mb-4">
-            Hello, I'm Angelo! I'm a software engineer based in Dublin, Ireland,
+            Hello, I&apos;m Angelo! I&apos;m a software engineer based in Dublin, Ireland,
             with a strong focus on full-stack development and AI-driven automation.
             Since the start of my career I have been dedicated to continuously
             learning and applying modern software practices — from architecting web
             platforms to designing intelligent workflows that help businesses operate
             more efficiently. Currently, as Principal Software Engineer at LDS
-            Carpentry Ltd, I am building the company's entire digital infrastructure
+            Carpentry Ltd, I am building the company&apos;s entire digital infrastructure
             from scratch: the public website, automated quotation systems, project
             administration tooling via Jira, and an ERP platform currently in active
             development.
