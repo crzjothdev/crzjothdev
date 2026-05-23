@@ -16,6 +16,44 @@ export default function Experience() {
 
         <div className="pb-6">
           <div className="mb-2">
+            <h4 className="text-lg font-medium">Principal Software Engineer at <strong>LDS Carpentry Ltd</strong></h4>
+            <h5 className="text-sm font-semibold text-gray-500">Mar 2025 – Present</h5>
+          </div>
+          <p className="text-justify">
+            As the sole software engineer, I am responsible for designing and building the
+            company's complete digital presence and internal tooling from the ground up. This
+            includes the public website, an automated quotation system that replaced a manual
+            paper-based process, project administration workflows via Jira, and an ERP platform
+            currently in active development to centralise operations across the business.
+          </p>
+          <List>
+            <li>Design and develop the company website end-to-end, from architecture to deployment</li>
+            <li>Automate business-critical processes including quotation generation and project tracking</li>
+            <li>Implement Jira for project administration and team workflow management</li>
+            <li>Lead the architecture and development of a custom ERP platform</li>
+          </List>
+        </div>
+
+        <div className="pb-6">
+          <div className="mb-2">
+            <h4 className="text-lg font-medium">Freelance Software Developer</h4>
+            <h5 className="text-sm font-semibold text-gray-500">Sep 2023 – Feb 2025</h5>
+          </div>
+          <p className="text-justify">
+            Relocated to Dublin, Ireland, to advance English language proficiency and expand
+            professional networks in the European market. During this period I continued to apply
+            and grow my engineering skills through independent freelance projects, while immersing
+            myself in the Irish tech community.
+          </p>
+          <List>
+            <li>Delivered freelance web development projects for independent clients</li>
+            <li>Continued professional development in modern frontend and automation technologies</li>
+            <li>Relocated to Ireland and established a professional base in the Dublin market</li>
+          </List>
+        </div>
+
+        <div className="pb-6">
+          <div className="mb-2">
             <h4 className="text-lg font-medium">
               External Consultant at{' '}
               <a href="https://jetstereo.com" className="text-brand-teal hover:underline">
@@ -25,36 +63,32 @@ export default function Experience() {
             <h5 className="text-sm font-semibold text-gray-500">Aug 2023</h5>
           </div>
           <p className="text-justify">
-            I cooperated to enhance customer focused services as a way to provide soft navigation
-            specially in checkout module of the web store. I also started to apply DevOps principles
-            as to automating the deployment process.
+            Contributed to enhancing customer-focused services by improving navigation across
+            the web store, with a particular focus on the checkout module. Applied DevOps
+            principles to begin automating the deployment process.
           </p>
           <List>
-            <li>Build highly qualified software to offer better customer service</li>
-            <li>Pick up technical software specifications based on business rentability</li>
-            <li>Navigation data analytics as feedback to build a better user experience</li>
+            <li>Built high-quality software improvements to elevate customer service</li>
+            <li>Gathered technical software specifications aligned with business profitability</li>
+            <li>Analysed navigation data to inform user experience improvements</li>
           </List>
         </div>
 
         <div className="pb-6">
           <div className="mb-2">
             <h4 className="text-lg font-medium">Software Developer at <strong>JETSTEREO S.A.</strong></h4>
-            <h5 className="text-sm font-semibold text-gray-500">Oct 2019 - Jan 2022</h5>
+            <h5 className="text-sm font-semibold text-gray-500">Oct 2019 – Jan 2022</h5>
           </div>
           <p className="text-justify">
-            I cooperate as to enhance customer focused services as a way to provide soft navigation,
-            especially the checkout module of their web shopping platform. I also started to apply
-            DevOps principles as to automating the deployment process. When it was necessary to
-            rebuild the online store, I took the role to propose and started applying modern tools
-            to improve the performance.
+            Contributed to enhancing customer-focused services by improving navigation across the
+            checkout module of the company's web shopping platform. Applied DevOps principles to
+            automate the deployment process and, when a full rebuild of the online store was
+            required, proposed and led the adoption of modern tools to improve performance.
           </p>
           <List>
-            <li>Responsibly building new payment methods in the online store</li>
-            <li>Worked with designers and marketing areas to provide a better customer experience</li>
-            <li>
-              I had the responsibility to upgrade the entire web store to decrease the response time
-              of the service and increase rentability
-            </li>
+            <li>Built and integrated new payment methods into the online store</li>
+            <li>Collaborated with design and marketing teams to improve customer experience</li>
+            <li>Led the upgrade of the entire web store to reduce response times and increase profitability</li>
           </List>
         </div>
 
@@ -66,21 +100,18 @@ export default function Experience() {
                 @BANHCAFE
               </a>
             </h4>
-            <h5 className="text-sm font-semibold text-gray-500">Sep 2022 - Nov 2022</h5>
+            <h5 className="text-sm font-semibold text-gray-500">Sep 2022 – Nov 2022</h5>
           </div>
           <p className="text-justify">
-            Responsable to build better system interfaces to communicate securely and faster systems
-            both home hosted and externally provided. I built an important tool for the bank, it was
-            popular to carry a physical online banking access token but there are many disadvantages,
-            so I decided to move it to a mobile app using React Native with special Java function
-            that generates token.
+            Responsible for building system interfaces to enable secure and efficient communication
+            between internally hosted and externally provided systems. Developed a key tool for the
+            bank by migrating physical online banking access tokens to a React Native mobile app
+            with a custom Java-based token generation function.
           </p>
           <List>
-            <li>
-              Maintain an API interface that connects to international money transfer services (SWIFT)
-            </li>
-            <li>Propose upgrades of obsolete automated processes (RPG to C#)</li>
-            <li>Support the accounting section with the closing process building graphical insights</li>
+            <li>Maintained an API interface connecting to international money transfer services (SWIFT)</li>
+            <li>Proposed and initiated upgrades of obsolete automated processes (RPG to C#)</li>
+            <li>Supported the accounting department during the closing process by building graphical insights</li>
           </List>
         </div>
 
