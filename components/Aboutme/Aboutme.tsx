@@ -7,25 +7,33 @@ export default function Aboutme() {
       <div className="p-8 rounded-3xl border border-brand-teal flex flex-col md:p-12 md:rounded-[40px] md:flex-row gap-6">
         <div className="flex-1 text-justify md:order-1">
           <p className="mb-4">
-            Hello my name is Angelo! Since I started my university life I have
-            been interested in computer technologist, continuosly learning and
-            applying modern software patterns and methods. I have been working
-            on great projects in private companies and personal entrepreneurship.
-            I have a special focus on frontend and mobile development but also
-            on backend and multipropuse programming languages.
+            Hello, I&apos;m Angelo! I&apos;m a software engineer based in Dublin, Ireland,
+            with a strong focus on full-stack development and AI-driven automation.
+            Since the start of my career I have been dedicated to continuously
+            learning and applying modern software practices — from architecting web
+            platforms to designing intelligent workflows that help businesses operate
+            more efficiently. Currently, as Principal Software Engineer at LDS
+            Carpentry Ltd, I am building the company&apos;s entire digital infrastructure
+            from scratch: the public website, automated quotation systems, project
+            administration tooling via Jira, and an ERP platform currently in active
+            development.
           </p>
           <p className="mb-4">
-            Much of my time is invested in getting best practices, faster development
-            methods and standardised rules to as provide highly qualified software.
+            Much of my time is invested in bridging the gap between engineering
+            capability and real business value — finding practical ways to automate
+            manual processes, reduce friction, and deliver software that genuinely
+            moves the needle. I thrive on ownership and end-to-end responsibility,
+            and I am actively seeking opportunities with ambitious teams in Ireland
+            and globally.
           </p>
-          <span>Some of the skilled programming languages that I have been working with are:</span>
+          <span>Some of the technologies I work with:</span>
           <ul className="chevron-list mt-2 grid grid-cols-2" style={{ listStyleImage: "url('/icons/chevron.svg')" }}>
-            <li>JS</li>
+            <li>TypeScript</li>
             <li>C#</li>
-            <li>PHP</li>
-            <li>Java</li>
-            <li>C++</li>
+            <li>React / Next.js</li>
             <li>Python</li>
+            <li>JavaScript</li>
+            <li>Java</li>
             <li>
               <a
                 href="/documents/resume.pdf"
