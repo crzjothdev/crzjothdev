@@ -11,13 +11,13 @@ function List({ children }: { children: ReactNode }) {
 export default function Experience() {
   return (
     <div id="experience">
-      <h3 className="text-3xl font-normal mb-8">Experience</h3>
-      <div className="p-8 rounded-3xl border border-brand-teal md:p-12 md:rounded-[40px]">
+      <h3 className="text-2xl font-semibold mb-6 pl-3 border-l-4 border-brand-teal">Experience</h3>
+      <div className="p-8 rounded-2xl border border-brand-teal bg-white dark:bg-gray-900 dark:border-teal-700 md:p-12">
 
         <div className="pb-6">
           <div className="mb-2">
             <h4 className="text-lg font-medium">Principal Software Engineer at <strong>LDS Carpentry Ltd</strong></h4>
-            <h5 className="text-sm font-semibold text-gray-500">Mar 2025 – Present</h5>
+            <h5 className="text-sm font-semibold text-gray-500 dark:text-gray-400">Mar 2025 – Present</h5>
           </div>
           <p className="text-justify">
             As the sole software engineer, I am responsible for designing and building the
@@ -37,7 +37,7 @@ export default function Experience() {
         <div className="pb-6">
           <div className="mb-2">
             <h4 className="text-lg font-medium">Freelance Software Developer</h4>
-            <h5 className="text-sm font-semibold text-gray-500">Sep 2023 – Feb 2025</h5>
+            <h5 className="text-sm font-semibold text-gray-500 dark:text-gray-400">Sep 2023 – Feb 2025</h5>
           </div>
           <p className="text-justify">
             Relocated to Dublin, Ireland, to advance English language proficiency and expand
@@ -60,7 +60,7 @@ export default function Experience() {
                 @JETSTEREO S.A.
               </a>
             </h4>
-            <h5 className="text-sm font-semibold text-gray-500">Aug 2023</h5>
+            <h5 className="text-sm font-semibold text-gray-500 dark:text-gray-400">Aug 2023</h5>
           </div>
           <p className="text-justify">
             Contributed to enhancing customer-focused services by improving navigation across
@@ -77,7 +77,7 @@ export default function Experience() {
         <div className="pb-6">
           <div className="mb-2">
             <h4 className="text-lg font-medium">Software Developer at <strong>JETSTEREO S.A.</strong></h4>
-            <h5 className="text-sm font-semibold text-gray-500">Oct 2019 – Jan 2022</h5>
+            <h5 className="text-sm font-semibold text-gray-500 dark:text-gray-400">Oct 2019 – Jan 2022</h5>
           </div>
           <p className="text-justify">
             Contributed to enhancing customer-focused services by improving navigation across the
@@ -100,7 +100,7 @@ export default function Experience() {
                 @BANHCAFE
               </a>
             </h4>
-            <h5 className="text-sm font-semibold text-gray-500">Sep 2022 – Nov 2022</h5>
+            <h5 className="text-sm font-semibold text-gray-500 dark:text-gray-400">Sep 2022 – Nov 2022</h5>
           </div>
           <p className="text-justify">
             Responsible for building system interfaces to enable secure and efficient communication

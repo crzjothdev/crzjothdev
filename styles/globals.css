@@ -4,7 +4,11 @@
 
 @theme {
   --color-brand-teal: #20909a;
+  --color-brand-teal-hover: #1a7a84;
   --color-footer-dark: #05262b;
+  --color-drawer-border: #4f4f4f;
+  --color-drawer-hover: #073a42;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
 .chevron-list {

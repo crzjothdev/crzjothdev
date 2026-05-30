@@ -7,6 +7,7 @@ import SkilledTools from '../components/SkilledTools/SkilledTools'
 import Projects from '../components/Projects/Projects'
 import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
+import FadeIn from '../components/FadeIn/FadeIn'
 
 const pages = [
   { label: 'About Me', target: 'about-me' },
@@ -23,11 +24,11 @@ export default function Home() {
       <main>
         <Parallax />
         <div className="md:w-[70%] lg:w-[60%] mx-auto">
-          <Section><Aboutme /></Section>
-          <Section><Experience /></Section>
-          <Section><SkilledTools /></Section>
-          <Section><Projects /></Section>
-          <Section><Contact /></Section>
+          <FadeIn><Section><Aboutme /></Section></FadeIn>
+          <FadeIn><Section><Experience /></Section></FadeIn>
+          <FadeIn><Section><SkilledTools /></Section></FadeIn>
+          <FadeIn><Section><Projects /></Section></FadeIn>
+          <FadeIn><Section><Contact /></Section></FadeIn>
         </div>
       </main>
       <Footer />
