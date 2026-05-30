@@ -32,7 +32,7 @@ Tasks are ordered by dependency. Each group can be committed independently.
 
 ---
 
-## Group 3 — AppBar & Parallax Tests
+## Group 3 — Remaining Component Tests
 
 6. **AppBar** (`components/AppBar/AppBar.tsx`)
    - Renders all nav items passed via `pages` prop (labels visible)
@@ -47,10 +47,6 @@ Tasks are ordered by dependency. Each group can be committed independently.
    - "Get in touch" link has `href="#contact"`
    - GitHub, LinkedIn, and X social links rendered with correct `aria-label` attributes
 
----
-
-## Group 4 — Section Component Tests
-
 8. **Aboutme** — renders section heading, bio text visible, profile image with `alt="Angelo Cruz"`
 9. **Experience** — renders section heading, at least one job title and employer visible
 10. **SkilledTools** — renders section heading, all 8 tool names visible, each image has non-empty `alt`
@@ -59,17 +55,13 @@ Tasks are ordered by dependency. Each group can be committed independently.
 
 ---
 
-## Group 5 — Integration Test
+## Group 4 — Integration Test & Coverage Gate
 
 13. **Main page** (`app/page.tsx`)
     - All five sections render: About Me, Experience, Skills & Tools, Projects, Get In Touch
     - AppBar is present in the document
     - Footer is present in the document
     - Navigating (clicking nav button) calls `scrollIntoView` on the target element
-
----
-
-## Group 6 — Coverage Gate
 
 14. Run `docker exec alphawolf npm test -- --coverage` and confirm line coverage ≥ 70%.
 15. If below threshold: add missing cases to the lowest-coverage files first.
