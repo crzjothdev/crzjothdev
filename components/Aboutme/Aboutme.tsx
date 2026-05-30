@@ -3,8 +3,8 @@ import Image from 'next/image'
 export default function Aboutme() {
   return (
     <div id="about-me">
-      <h3 className="text-3xl font-normal mb-8">About Me</h3>
-      <div className="p-8 rounded-3xl border border-brand-teal flex flex-col md:p-12 md:rounded-[40px] md:flex-row gap-6">
+      <h3 className="text-2xl font-semibold mb-6 pl-3 border-l-4 border-brand-teal">About Me</h3>
+      <div className="p-8 rounded-2xl border border-brand-teal bg-white dark:bg-gray-900 dark:border-teal-700 flex flex-col md:p-12 md:flex-row gap-6">
         <div className="flex-1 text-justify md:order-1">
           <p className="mb-4">
             Hello, I&apos;m Angelo! I&apos;m a software engineer based in Dublin, Ireland,
@@ -39,7 +39,7 @@ export default function Aboutme() {
                 href="/documents/resume.pdf"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-700 underline-offset-2 decoration-gray-700 hover:text-brand-teal hover:decoration-brand-teal underline"
+                className="text-gray-700 dark:text-gray-300 underline-offset-2 decoration-gray-700 dark:decoration-gray-300 hover:text-brand-teal hover:decoration-brand-teal underline"
               >
                 Read more on the resume
               </a>

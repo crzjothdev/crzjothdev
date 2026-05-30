@@ -36,11 +36,11 @@ For each viewport, open the running app and scroll through every section. Check 
 
 ## 2. Dark Mode
 
-- [ ] Toggle button is visible and accessible (keyboard-operable, has `aria-label`)
-- [ ] Toggling applies `dark` class to `<html>` immediately
-- [ ] All sections switch correctly — no section left in light-only styling
-- [ ] Background, text, borders, and card surfaces all have `dark:` variants applied
-- [ ] Preference persists on page reload (check `localStorage` key is set)
+- [x] Toggle button is visible and accessible (keyboard-operable, has `aria-label`)
+- [x] Toggling applies `dark` class to `<html>` immediately
+- [x] All sections switch correctly — no section left in light-only styling
+- [x] Background, text, borders, and card surfaces all have `dark:` variants applied
+- [x] Preference persists on page reload (check `localStorage` key is set)
 - [ ] Preference persists on navigation between pages / scroll positions
 
 ---
@@ -49,16 +49,16 @@ For each viewport, open the running app and scroll through every section. Check 
 
 - [ ] Chosen web font loads correctly and renders in all sections
 - [ ] Heading hierarchy is visually distinct: h1 > h2 > h3 > body
-- [ ] Brand teal (`#20909a`) used consistently for accent elements
-- [ ] No raw hex colour values in component files — only Tailwind classes or CSS variables
+- [x] Brand teal (`#20909a`) used consistently for accent elements
+- [x] No raw hex colour values in component files — only Tailwind classes or CSS variables
 
 ---
 
 ## 4. Motion & Animation
 
-- [ ] Sections fade in on scroll — animation triggers once as section enters viewport
+- [x] Sections fade in on scroll — animation triggers once as section enters viewport
 - [ ] Animations do not cause visible layout shift (no content jumping)
-- [ ] With `prefers-reduced-motion: reduce` set in OS/browser, animations are disabled
+- [x] With `prefers-reduced-motion: reduce` set in OS/browser, animations are disabled
 - [ ] Animation feels professional — not distracting, not laggy
 
 ---
@@ -66,7 +66,7 @@ For each viewport, open the running app and scroll through every section. Check 
 ## 5. Assets
 
 - [ ] All images are `.webp` format
-- [ ] All `<Image>` components have meaningful `alt` text (not empty, not filename)
+- [x] All `<Image>` components have meaningful `alt` text (not empty, not filename)
 - [ ] No `console.warn` about missing `width`/`height` on images
 - [ ] No broken image links in any section
 
@@ -74,8 +74,8 @@ For each viewport, open the running app and scroll through every section. Check 
 
 ## 6. Build & Type Check
 
-- [ ] `docker exec alphawolf npm run build` completes with zero TypeScript errors
-- [ ] `docker exec alphawolf npm run lint` reports no errors
+- [x] `docker exec alphawolf npm run build` completes with zero TypeScript errors
+- [x] `docker exec alphawolf npm run lint` reports no errors
 - [ ] App runs correctly in production mode: `docker exec alphawolf npm start`
 
 ---
